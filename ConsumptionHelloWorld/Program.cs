@@ -168,8 +168,22 @@ namespace ConsumptionHelloWorld
                 TimePeriod = new BudgetTimePeriod
                 {
                     StartDate = DateTime.UtcNow.AddDays(-DateTime.UtcNow.Day + 1),
-                    EndDate = DateTime.UtcNow.AddMonths(6)
+                    EndDate = DateTime.UtcNow.AddMonths(2)
                 }
+
+                /* Notifications for this budget can also be configured, uncomment the code below to add one
+                ,Notifications = new Dictionary<string, Notification>()
+                {
+                    {
+                        "NotificationName", new Notification
+                        {
+                            Enabled = true,
+                            Threshold = (decimal)0.90,
+                            ContactEmails = {"email1","email2" }
+                        }
+                    }
+                }
+                */
             };
 
             Console.WriteLine("What would you like your budget to be named? Please type your response below: ");
